@@ -2,3 +2,6 @@
 ._.DS_Store
 .ipynb_checkpoints
 *.zip
+
+# avoid h5 model files since they're too large
+*.h5
