@@ -44,12 +44,12 @@ def predict_happiness(image_np, model_name):
         prediction = model.predict(image)
     state = None
     confidence = None
-    if(prediction[0][0] > prediction[0][1]):
+    if(prediction[0][0] < 0.5):
         state = 'Happy'
         confidence = prediction[0][0]
     else:
         state = 'Not Happy'
-        confidence = prediction[0][1]
+        confidence = prediction[0][0]
     return state, confidence
 
 
